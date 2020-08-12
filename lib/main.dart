@@ -46,12 +46,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 opac = 0.1;
               else
                 opac = 1;
-              if (posleft2 >= -200 && posleft2 <= -25)
+              if (posleft2 >= -200 && posleft2 <= -10)
                 posleft2 = posleft2;
               else if (posleft2 < -200)
                 posleft2 = -200;
               else
-                posleft2 = -25;
+                posleft2 = -10;
             });
           }
         },
@@ -94,9 +94,34 @@ class _MyHomePageState extends State<MyHomePage> {
           ListView(
             children: [
               Container(
-                height: 1200,
+                height: 570,
                 color: Colors.transparent,
               ),
+              Container(
+                child: Stack(children: [
+                  Container(
+                    height: 100,
+                    child: Image.asset(
+                      'assets/images/backgrnd.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 100,
+                        width: data.size.width,
+                        child: Image.asset(
+                          'assets/images/blackmarbles.png',
+                        ),
+                        color: Colors.transparent,
+                      ),
+                    ],
+                  ),
+                ]),
+              )
             ],
           )
         ]),
